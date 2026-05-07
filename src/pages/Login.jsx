@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Login.css'
 
-const Login = () => {
+const Login = ({ onNavigate }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
@@ -21,7 +21,7 @@ const Login = () => {
       // Clerk integration point: after Clerk signs the user in, route them to
       // /interests if they do not have interests saved in Supabase yet.
       window.localStorage.setItem('newsly_logged_in', 'true')
-      window.location.assign('/interests')
+      onNavigate('/interests')
       return
     }
 
@@ -55,7 +55,7 @@ const Login = () => {
         <button
           className="auth_secondary"
           type="button"
-          onClick={() => window.location.assign('/signup')}
+          onClick={() => onNavigate('/signup')}
         >
           Create an Account
         </button>

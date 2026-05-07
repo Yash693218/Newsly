@@ -36,15 +36,15 @@ function App() {
       case "/whatsnew":
         return <Whatsnew />
       case '/login':
-        return <Login />
+        return <Login onNavigate={navigate} />
       case '/signup':
-        return <Signup />
+        return <Signup onNavigate={navigate} />
       case '/interests':
-        return <InterestSelection />
+        return <InterestSelection onNavigate={navigate} />
       case '/profile-setup':
-        return <ProfileSetup />
+        return <ProfileSetup onNavigate={navigate} />
       case '/profile':
-        return <Profile />
+        return <Profile onNavigate={navigate} />
       default:
         return <Home onAuthNavigate={navigate} />
     }

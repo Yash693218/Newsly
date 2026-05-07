@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Profile.css'
 
-const Profile = () => {
+const Profile = ({ onNavigate }) => {
   const [email, setEmail] = useState('')
   const [profile, setProfile] = useState(null)
 
@@ -26,7 +26,7 @@ const Profile = () => {
   const handleLogout = () => {
     // Clerk integration point: call Clerk signOut(), then route to /login.
     window.localStorage.removeItem('newsly_logged_in')
-    window.location.assign('/login')
+    onNavigate('/login')
   }
 
   return (
@@ -67,14 +67,14 @@ const Profile = () => {
           <button
             className="profile_secondary"
             type="button"
-            onClick={() => window.location.assign('/interests')}
+            onClick={() => onNavigate('/interests')}
           >
             Edit Interests
           </button>
           <button
             className="profile_secondary"
             type="button"
-            onClick={() => window.location.assign('/your-space')}
+            onClick={() => onNavigate('/your-space')}
           >
             Open Your Space
           </button>

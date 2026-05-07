@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Signup.css'
 
-const Signup = () => {
+const Signup = ({ onNavigate }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [message, setMessage] = useState('')
@@ -15,7 +15,7 @@ const Signup = () => {
     // Clerk's signUp flow, then create/read the matching Supabase user record.
     window.localStorage.setItem('newsly_user', JSON.stringify(payload))
     setMessage('Account created. Choose your interests next.')
-    window.setTimeout(() => window.location.assign('/interests'), 600)
+    window.setTimeout(() => onNavigate('/interests'), 600)
   }
 
   return (

@@ -14,7 +14,7 @@ const interestOptions = [
   'Startups',
 ]
 
-const InterestSelection = () => {
+const InterestSelection = ({ onNavigate }) => {
   const [selected, setSelected] = useState(['Technology', 'Business'])
   const [error, setError] = useState('')
 
@@ -36,7 +36,7 @@ const InterestSelection = () => {
     // Supabase integration point: upsert these interests for the Clerk user id.
     // Example table shape: user_interests { user_id, interests, updated_at }.
     window.localStorage.setItem('newsly_interests', JSON.stringify(selected))
-    window.location.assign('/profile-setup')
+    onNavigate('/profile-setup')
   }
 
   return (

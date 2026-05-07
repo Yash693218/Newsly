@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './ProfileSetup.css'
 
-const ProfileSetup = () => {
+const ProfileSetup = ({ onNavigate }) => {
   const [displayName, setDisplayName] = useState('')
   const [bio, setBio] = useState('')
   const [interests, setInterests] = useState([])
@@ -32,7 +32,7 @@ const ProfileSetup = () => {
     // Supabase integration point: save this profile against auth.user.id from Clerk.
     // Suggested table: profiles { user_id, display_name, bio, interests, created_at }.
     window.localStorage.setItem('newsly_profile', JSON.stringify(profile))
-    window.location.assign('/profile')
+    onNavigate('/profile')
   }
 
   return (
