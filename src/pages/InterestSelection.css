@@ -1,0 +1,97 @@
+.interest_page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 6vw 80px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.interest_panel {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  box-shadow: var(--shadow-soft);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.interest_intro {
+  max-width: 680px;
+}
+
+.interest_kicker {
+  color: var(--brand-purple);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.interest_intro h1 {
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.1;
+  margin-top: 8px;
+}
+
+.interest_intro p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.interest_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.interest_chip {
+  min-height: 54px;
+  border: 1px solid var(--border-light);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-weight: 700;
+}
+
+.interest_chip.is_selected {
+  background: var(--btn-gradient);
+  border-color: transparent;
+  color: var(--text-light);
+}
+
+.interest_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  color: var(--text-secondary);
+}
+
+.interest_continue {
+  background: var(--btn-gradient);
+  border: none;
+  color: var(--text-light);
+  border-radius: 999px;
+  padding: 12px 22px;
+}
+
+.interest_error {
+  color: #dc2626;
+  font-size: 14px;
+  padding: 0;
+}
+
+@media (max-width: 480px) {
+  .interest_page {
+    padding: 24px 16px 50px;
+  }
+
+  .interest_panel {
+    padding: 22px;
+  }
+}

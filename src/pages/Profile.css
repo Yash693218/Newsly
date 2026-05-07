@@ -1,0 +1,133 @@
+.profile_page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 6vw 80px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.profile_card {
+  width: min(760px, 100%);
+  background: var(--bg-card);
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-soft);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile_header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.profile_avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: var(--btn-gradient);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.profile_kicker {
+  color: var(--brand-purple);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.profile_title {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.1;
+}
+
+.profile_email {
+  color: var(--text-secondary);
+  padding: 8px 0 0;
+}
+
+.profile_section {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: 18px;
+}
+
+.profile_section > span {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.profile_section p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding: 0;
+}
+
+.profile_interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.profile_chip {
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.profile_actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.profile_logout {
+  background: var(--brand-blue);
+  border: none;
+  color: var(--text-light);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profile_secondary {
+  background: transparent;
+  border: 1px solid var(--brand-blue);
+  color: var(--brand-blue);
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .profile_page {
+    padding: 24px 16px 50px;
+  }
+
+  .profile_card {
+    padding: 22px;
+  }
+}

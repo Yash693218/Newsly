@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  /* Brand Gradient */
+  --brand-pink: #f72585;
+  --brand-purple: #7a5cff;
+  --brand-blue: #4361ee;
+
+  /* Backgrounds */
+  --bg-primary: #f6f7fb;
+  --bg-card: #ffffff;
+  --bg-navbar: #ffffff;
+  --bg-container: #e9e8e8;
+
+  /* Text */
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b7280;
+  --text-light: #ffffff;
+
+  /* Borders / Shadows */
+  --border-light: #e5e7eb;
+  --shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+  /* Buttons */
+  --btn-gradient: linear-gradient(
+    90deg,
+    var(--brand-pink),
+    var(--brand-purple),
+    var(--brand-blue)
+  );
+  --btn-hover: brightness(1.1);
+
+  /* Tags / Chips */
+  --chip-bg: #eef2ff;
+  --chip-text: #4f46e5;
+}
+
+:root[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-card: #1e293b;
+  --bg-navbar: #1e293b;
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+
+  --border-light: #334155;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#root {
+    font-family: Public Sans;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
